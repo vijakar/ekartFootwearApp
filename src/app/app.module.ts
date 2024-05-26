@@ -7,6 +7,13 @@ import { HeaderComponent } from './header/header.component';
 import { TopMenuComponent } from './header/top-menu/top-menu.component';
 import { MainMenuComponent } from './header/main-menu/main-menu.component';
 import { TopHeaderComponent } from './top-header/top-header.component';
+import { ContainerComponent } from './container/container.component';
+import { SearchComponent } from './container/search/search.component';
+import { FormsModule } from '@angular/forms';
+import { ProductListComponent } from './container/product-list/product-list.component';
+import { ProductComponent } from './container/product-list/product/product.component';
+import { FilterComponent } from './container/product-list/filter/filter.component';
+
 
 @NgModule({
   declarations: [
@@ -14,11 +21,18 @@ import { TopHeaderComponent } from './top-header/top-header.component';
     HeaderComponent,
     TopMenuComponent,
     MainMenuComponent,
-    TopHeaderComponent
+    TopHeaderComponent,
+    ContainerComponent,
+    SearchComponent,
+    ProductListComponent,
+    ProductComponent,
+    FilterComponent,
+    
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [
     provideClientHydration()
