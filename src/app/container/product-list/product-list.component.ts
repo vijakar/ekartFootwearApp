@@ -534,4 +534,8 @@ export class ProductListComponent {
     }
   ];
 
+
+  totalProducts = this.products.length
+  inStockProducts = this.products.filter(p=>p.is_in_inventory===true).length
+outofStockProducts=this.products.filter(p=>p.is_in_inventory===false).length
 }
