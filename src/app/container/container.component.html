@@ -10,8 +10,8 @@
     <button (click)="incrementCartValue()">+</button>
     <input (input)="onNameChange($event)"><br>
     <p>name={{name}}</p> -->
-    <app-search></app-search>
-    <app-product-list></app-product-list>
+    <app-search (searchTextChanged)="onSearchText($event)"></app-search>
+    <app-product-list [searchText]="searchText"></app-product-list>
 </div>
 
 <!--Disabled, Hidden, Checked-->
