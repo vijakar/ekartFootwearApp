@@ -9,15 +9,17 @@ export class SearchComponent {
 
   searchText: string = '';
 
-  updateSearchText(event: any){
-      this.searchText = event.target.value;
-  }
+ 
 
   @Output()
   searchTextChanged: EventEmitter<string>= new EventEmitter<string>();
 
-  onSearchText(){
+  
+
+  updateSearchText(inputEl:HTMLInputElement){
+    this.searchText = inputEl.value;
     this.searchTextChanged.emit(this.searchText)
-  }
+
+}
 
 }
